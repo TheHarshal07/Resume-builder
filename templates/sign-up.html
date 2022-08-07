@@ -1,0 +1,80 @@
+{% extends 'index.html' %} {% block title %}Sign up{% endblock %}
+
+{% block content %}
+<form method="post">
+    <style>
+        .form-group{
+            width: 500px;
+            margin:auto;
+        }
+        label{
+            padding:10px;
+
+        }
+    </style>
+    <h3 align="center">Sign Up</h3>
+<div class="form-group">
+    <label for="first">First name</label>
+    <input 
+    type="text" 
+    class="form-control"
+    name="first-name" 
+    id="first" 
+    placeholder="Enter the first name"/>
+</div>
+<div class="form-group">
+    <label for="last">Last name</label>
+    <input 
+    type="text" 
+    class="form-control"
+    name="last-name"
+    id="last"
+    placeholder="Enter the last name"
+    />
+</div>
+<div class="form-group">
+    <label for="email">Email address</label>
+    <input 
+    type="email" 
+    class="form-control"
+    name="email-add"
+    id="email"
+    placeholder="Enter the email"
+    />
+</div>
+<div class="form-group">
+    <label for="username">username</label>
+    <input 
+    type="text" 
+    name="user"
+    class="form-control"
+    id="username"
+    placeholder="create the username"
+    />
+</div>
+<div class="form-group">
+    <label for="passwd">password</label>
+    <input 
+    type="password" 
+    class="form-control"
+    name="pass"
+    id="passwd"
+    placeholder="create a password"
+    />
+</div>
+<div class="form-group">
+    <label for="passwd1">password confirm</label>
+    <input 
+    type="password" 
+    class="form-control"
+    name="passc"
+    id="passwd1"
+    placeholder="confirm password"
+    />
+</div>
+<br>
+<div class="form-group">
+    <button type="submit" class="btn btn-primary" >Submit</button>
+</div>
+</form>
+{% endblock %}
