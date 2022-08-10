@@ -1,34 +1,34 @@
 {% extends 'index.html' %} {% block title %}Sign up{% endblock %}
 
 {% block content %}
-<form method="post">
+<form method='POST'>
     <style>
         .form-group{
             width: 500px;
             margin:auto;
         }
         label{
-            padding:10px;
+            padding:5px;
 
         }
     </style>
     <h3 align="center">Sign Up</h3>
 <div class="form-group">
-    <label for="first">First name</label>
+    <label for="firstname">First name</label>
     <input 
     type="text" 
     class="form-control"
-    name="first-name" 
-    id="first" 
+    name="firstname" 
+    id="firstname" 
     placeholder="Enter the first name"/>
 </div>
 <div class="form-group">
-    <label for="last">Last name</label>
+    <label for="lastname">Last name</label>
     <input 
     type="text" 
     class="form-control"
-    name="last-name"
-    id="last"
+    name="lastname"
+    id="lastname"
     placeholder="Enter the last name"
     />
 </div>
@@ -37,7 +37,7 @@
     <input 
     type="email" 
     class="form-control"
-    name="email-add"
+    name="email"
     id="email"
     placeholder="Enter the email"
     />
@@ -46,29 +46,29 @@
     <label for="username">username</label>
     <input 
     type="text" 
-    name="user"
+    name="username"
     class="form-control"
     id="username"
     placeholder="create the username"
     />
 </div>
 <div class="form-group">
-    <label for="passwd">password</label>
+    <label for="pass1">password</label>
     <input 
     type="password" 
     class="form-control"
-    name="pass"
-    id="passwd"
+    name="pass1"
+    id="pass1"
     placeholder="create a password"
     />
 </div>
 <div class="form-group">
-    <label for="passwd1">password confirm</label>
+    <label for="pass2">password confirm</label>
     <input 
     type="password" 
     class="form-control"
-    name="passc"
-    id="passwd1"
+    name="pass2"
+    id="pass2"
     placeholder="confirm password"
     />
 </div>

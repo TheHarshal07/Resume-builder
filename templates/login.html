@@ -1,7 +1,8 @@
 {% extends 'index.html' %} {% block title %}Login{% endblock %}
 
 {% block content %}
-<form  method="post">
+<form  method="post"> <!-- POST methode carry requested parameter in message body of the HTTP request
+                           GET methode carry rquested parameter appended in URL string-->
     <style>
         h3{
             padding-top: 10px;
@@ -17,7 +18,7 @@
         <input type="text"
         class="form-control" 
         id="user"
-        name="username" 
+        name="user" 
         placeholder="Enter the username "/>
     </div>
     <br>
@@ -26,7 +27,7 @@
         <input 
         type="password"
         class="form-control" 
-        id="pass" name="password" 
+        id="pass" name="pass" 
         placeholder=" Enter the password"/>
     </div>
     <br>
@@ -47,7 +48,7 @@
 
 
 
-
+ 
 
 
 
