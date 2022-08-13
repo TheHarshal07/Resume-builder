@@ -1,80 +1,101 @@
-{% extends 'index.html' %} {% block title %}Sign up{% endblock %}
+{% extends 'index.html' %} {% block title %}Login{% endblock %}
 
 {% block content %}
-<form method='POST'>
-    <style>
-        .form-group{
-            width: 500px;
-            margin:auto;
-        }
-        label{
-            padding:5px;
 
-        }
-    </style>
-    <h3 align="center">Sign Up</h3>
-<div class="form-group">
-    <label for="firstname">First name</label>
-    <input 
-    type="text" 
-    class="form-control"
-    name="firstname" 
-    id="firstname" 
-    placeholder="Enter the first name"/>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <h1 class="display-4 mt-100">Hello</h1>
+        </div>
+        <div class="col-md-4">
+            <div class="card mt-100">
+                <div class="card-body">
+                    <form calss="form" method="POST" action="/add_user">
+                         <!-- POST methode carry requested parameter in message body of the HTTP request
+                            GET methode carry rquested parameter appended in URL string-->
+     <style>
+         h3{
+             padding-top: 10px;
+         }
+         .form-group{
+             width: auto;
+             margin: auto;
+             padding: 5px;
+            
+         }
+     </style>
+     <h3 align="center">Sign up</h3>
+     <div class="form-group">
+        <label for="firstname">Firstname</label>
+        <input
+        class="form-control"
+        name="firstname"
+        id="firstname"
+        placeholder="Enter the firstname"
+        />
+     </div>
+     <div class="form-group">
+        <label for="lastname">Firstname</label>
+        <input
+        class="form-control"
+        name="lastname"
+        id="lastname"
+        placeholder="Enter the firstname"
+        />
+     </div>
+     <div class="form-group">    
+         <label for="email1">Email</label>
+         <input type="email"
+         class="form-control" 
+         name="email1"
+         id="email1"
+         placeholder="Enter the email "/>
+     </div>
+     <div class="form-group">
+         <label for="pass1">password</label>
+         <input 
+         type="password"
+         class="form-control" 
+         name="pass1" 
+         id="pass1"
+         placeholder="Enter the password"/>
+     </div>
+     <div class="form-group">
+        <label for="pass2">password</label>
+        <input 
+        type="password"
+        class="form-control" 
+        name="pass2" 
+        id="pass2"
+        placeholder="Confirm password"/>
+    </div>
+     <p class="mt-2">Already have account? <a href="/login">Login</a></p>
+     <div class=" form-group">
+        <button type="submit" class="btn btn-primary " value="Login">Sign-up</button>
+     </div>
+ 
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="form-group">
-    <label for="lastname">Last name</label>
-    <input 
-    type="text" 
-    class="form-control"
-    name="lastname"
-    id="lastname"
-    placeholder="Enter the last name"
-    />
-</div>
-<div class="form-group">
-    <label for="email">Email address</label>
-    <input 
-    type="email" 
-    class="form-control"
-    name="email"
-    id="email"
-    placeholder="Enter the email"
-    />
-</div>
-<div class="form-group">
-    <label for="username">username</label>
-    <input 
-    type="text" 
-    name="username"
-    class="form-control"
-    id="username"
-    placeholder="create the username"
-    />
-</div>
-<div class="form-group">
-    <label for="pass1">password</label>
-    <input 
-    type="password" 
-    class="form-control"
-    name="pass1"
-    id="pass1"
-    placeholder="create a password"
-    />
-</div>
-<div class="form-group">
-    <label for="pass2">password confirm</label>
-    <input 
-    type="password" 
-    class="form-control"
-    name="pass2"
-    id="pass2"
-    placeholder="confirm password"
-    />
-</div>
-<br>
-<div class="form-group">
-    <button type="submit" class="btn btn-primary" >Submit</button>
-</div>
-</form>
+
 {% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
