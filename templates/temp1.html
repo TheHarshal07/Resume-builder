@@ -1,0 +1,159 @@
+{% extends 'index.html' %} {% block title %}Login{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" href="static\css\style.css">
+
+<title>Reusme Generator</title>
+
+<div class="container" id="cv-form">
+<h1 class="text-center my-2">Resume Generator</h1>
+<p class="text-center" >Good resume increases the chances of hired</p>
+
+<div class="row">
+
+   <div class="col-md-6">
+    <h2>Personal Information</h2>
+    
+
+    <div class="form-group mt-2">
+        <label for="fname">First name</label>
+        <input 
+        type="text" 
+        id="fname1"
+        class="form-control" 
+        placeholder="Enter the first name">
+    </div>
+
+    <div class="fomr-group mt-2">
+        <label for="lname">Last name</label>
+        <input
+        type="text" 
+        id="lanme1"
+        class="form-control" 
+        placeholder="Ente the last name">
+    </div>
+
+    <div class="fomr-group mt-2">
+        <label for="address1">Your address</label>
+        <textarea
+        type="text" 
+        id="addr"
+        class="form-control" 
+        placeholder="Ente your address"></textarea>
+    </div>
+
+    <div class="fomr-group mt-2">
+        <label for="phone1">Phone</label>
+        <input
+        type="tel" 
+        id="number"
+        class="form-control" 
+        placeholder="Ente your number">
+    </div><br>
+    
+    <h2>Education details</h2>
+        <div class="row">
+            <div class="col-md-6 form-group mt-2">
+                 <label for="sname">School/college name</label>
+                 <input type="text" class="form-control" placeholder="School name">
+
+                 <label for="smonth">Start month</label>
+                 <input type="text" class="form-control" placeholder="Start month">
+
+                 <label for="emonth">End month</label>
+                 <input type="text" class="form-control" placeholder="end month">
+            </div>
+            <div class="col-md-6 form-group mt-2">
+                 <label for="locatio">location</label>
+                 <input type="text" class="form-control" placeholder="location">
+
+                 <label for="syear">Start year</label>
+                 <input type="text" class="form-control" placeholder="Start year">
+
+                 <label for="eyear">End year</label>
+                 <input type="text" class="form-control" placeholder="end year">
+            </div>
+        </div>
+    
+    </div>
+<div class="col-md-6">
+    <h2>Professional Information</h2>   
+    <div class="form=group mt-2">
+        <label for="objective">Objective</label>
+        <textarea name="obj" id="obj1" cols="30" rows="5" placeholder="Enter objective" class="form-control"></textarea>
+    </div>
+
+    <div class="fomr-group mt-2" id="we">
+        <label for="work">Work experince</label>
+        <textarea 
+        type="text"
+        class="form-control weField"
+        id="Work"
+        placeholder="Enter here"
+        rows="3"
+        ></textarea>
+    </div>
+
+        <div class="container text-center mt-2" id="WeButton">
+            <button onclick="addNewweFeild()" class="btn btn-primary btn-sm">Add</button>
+            <button onclick="removeItem()" class="btn-close" type="button" aria-label="Close"></button>
+        </div>
+        
+    
+
+    <div class="fomr-group mt-2" id="Edufield">
+        <label>Academic Qualification</label>
+        <textarea 
+        type="text"
+        class="form-control eqFld"
+        id="Work"
+        placeholder="Enter here"
+        rows="3"
+        ></textarea>
+    
+
+        <div class="container text-center mt-2" id="eqField">
+            <button onclick="addNeweqField()" class="btn btn-primary btn-sm" >Add</button>
+        </div>
+    </div>
+</div>
+
+   <div class="container text-center">
+        <br>
+        <buttton class="btn btn-primary btn-lg">Generate CV</buttton>
+   </div>
+
+
+
+
+
+ </div>
+</div>
+
+<div class="container" id="cv-template">
+    <div class="row">
+        <div class="col-md-4">
+            <!-- first col -->
+                <img 
+                src="https://isobarscience.com/wp-content/uploads/2020/09/default-profile-picture1.jpg" 
+                alt=""
+                class="img-fluid myimg mt-2"
+                >
+
+            <div class="container">
+                <p>Harshal Bhogal</p>
+                <p>+919209685286</p>
+                <p>Stay in Heaven, Vaikhunth</p>
+            </div>
+
+        </div>
+        <div class="col-md-8">
+        </div>
+    </div>
+</div>
+
+
+<script src="static\js\script.js"> </script>
+.
+{% endblock %}

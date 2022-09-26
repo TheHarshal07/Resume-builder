@@ -38,8 +38,12 @@ def Login1():
 
 @app.route('/logout')
 def logout():
-    flash('Hello', category='error')
+    flash('Hello', category='error') 
     return "<p>logout</p>"
+
+@app.route('/temp1')
+def temp1():
+    return render_template('temp1.html')
 
 @app.route('/home')
 def home():
