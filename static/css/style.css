@@ -2,20 +2,67 @@
  margin-top: 100px;
 }
 
-#cv-form{
+/* #cv-form{
+    display: none;
+} */
+
+#cv-template{
     display: none;
 }
 
-.background-image{
-    background-image: url('static\img\resume.jpg');
-    background-size: contain;
+.background{
+    background-color: rgb(234, 246, 246);
+}
+.main{
+    width: 100%;
+    background-image:  url('../img/resume.jpg');
     background-position: center;
-    background-repeat: no-repeat;
-    width: 800px;
-    height: 100vh;
+    background-size: cover;
+    height: 109vh;
 }
 
 .myimg{
     border-radius: 50%;
     width: 200px;
+}
+
+.bg1{
+    width: 100%;
+    background-image: url('../img/cesar-couto-TIvFLeqZ4ec-unsplash.jpg');
+    background-position: center ;
+    background-size: cover;
+    height: 109vh;
+}
+
+.nvabar{
+    width: 1200px;
+    height: 75px;
+    margin: auto;
+}
+
+.icon{
+    width: 80px;
+    float: left;
+    height: 70px;
+}
+
+.logo{
+    color: #ff7200;
+    font-size: 35px;
+    font-family: Algerian;
+    padding-left: 20px;
+    float: left;
+    padding-top: 20px;
+}
+
+.cv{
+    
+    color: black;
+    size: 4px;
+    
+}
+
+.btn{
+    size:10px;
+    padding: 15px;
 }

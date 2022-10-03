@@ -2,14 +2,12 @@
 
 {% block content %}
 
-<div class="container">
+<div class="main1">
     <div class="row">
         <div class="col-md-8">
-            <h1 class="display-4 mt-100">
-                Create a
-                job-winning CV
-                Get a recruiter-approved CV in minutes with our
-                easy-to-use builder and get hired quicker.</h1>
+            <h1 class="display-4 mt-100 cv"> 
+            <span class="auto-type"></span>
+            </h1>
         </div>
         <div class="col-md-4">
             <div class="card mt-100">
@@ -25,7 +23,11 @@
              width: auto;
              margin: auto;
              padding: 5px;
-            
+             
+         }
+         .form{
+            background: linear-gradient(to top rgba(0,0,0,0.8)50%, rgba(0,0,0,0.8)50% );
+            position: relative;
          }
      </style>
      <h3 align="center">Login</h3>
@@ -50,12 +52,21 @@
      <div class=" form-group">
         <button type="submit" class="btn btn-primary " value="Login" padding-left="10px">LOGIN</button>
      </div>
- 
                     </form>
                 </div>
             </div>
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <script>
+          var typed = new Typed(".auto-type", {
+              strings: ["  Create a job-winning CV Get a recruiter-approved CV in minutes with our easy-to-use builder and get hired quicker. "],
+              typeSpeed: 150,
+              backSpeed: 150,
+              loop: true
+          })  
+        </script>
     </div>
+   
 </div>
 
 {% endblock %}

@@ -1,7 +1,13 @@
-{% extends 'index.html' %} {% block title %}Login{% endblock %}
-
-{% block content %}
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    
 <link rel="stylesheet" href="static\css\style.css">
 
 <title>Reusme Generator</title>
@@ -15,25 +21,26 @@
    <div class="col-md-6">
     <h2>Personal Information</h2>
     
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group mt-2">
+                <label for="">Select your photo</label>
+               <input id="imgF" type="file" class="form-control"> 
+            </div>
+        </div>
 
-    <div class="form-group mt-2">
-        <label for="fname">First name</label>
-        <input 
-        type="text" 
-        id="fname1"
-        class="form-control" 
-        placeholder="Enter the first name">
+        <div class="col-md-6">
+            <div class="form-group mt-2">
+                <label for="fname">First name</label>
+                <input 
+                type="text" 
+                id="fname1"
+                class="form-control" 
+                placeholder="Enter the first name">
+            </div>
+        </div>
+
     </div>
-
-    <div class="fomr-group mt-2">
-        <label for="lname">Last name</label>
-        <input
-        type="text" 
-        id="lanme1"
-        class="form-control" 
-        placeholder="Ente the last name">
-    </div>
-
     <div class="fomr-group mt-2">
         <label for="address1">Your address</label>
         <textarea
@@ -47,7 +54,7 @@
         <label for="phone1">Phone</label>
         <input
         type="tel" 
-        id="number"
+        id="phone"
         class="form-control" 
         placeholder="Ente your number">
     </div><br>
@@ -70,16 +77,24 @@
 
                  <label for="syear">Start year</label>
                  <input type="text" class="form-control" placeholder="Start year">
-
+                <div class="form-group custom-select-box">
                  <label for="eyear">End year</label>
                  <input type="text" class="form-control" placeholder="end year">
+                 <!-- <div class="option-list">
+                    <ul>
+                        <li>End Year</li>
+                        <li>2022</li>
+                        <li>2021</li>
+                        <li>2020</li><li>2019</li><li>2018</li><li>2017</li><li>2016</li><li>2015</li><li>2014</li><li>2013</li><li>2012</li><li>2011</li><li>2010</li><li>2009</li><li>2008</li><li>2007</li><li>2006</li><li>2005</li><li>2004</li><li>2003</li><li>2002</li><li>2001</li><li>2000</li><li>1999</li><li>1998</li><li>1997</li><li>1996</li><li>1995</li><li>1994</li><li>1993</li><li>1992</li><li>1991</li><li>1990</li><li>1989</li><li>1988</li><li>1987</li><li>1986</li><li>1985</li><li>1984</li><li>1983</li><li>1982</li><li>1981</li><li>1980</li><li>1979</li><li>1978</li><li>1977</li><li>1976</li><li>1975</li><li>1974</li><li>1973</li><li>1972</li><li>1971</li><li>1970</li><li>1969</li><li>1968</li><li>1967</li><li>1966</li><li>1965</li><li>1964</li><li>1963</li><li>1962</li><li>1961</li><li>1960</li><li>1959</li><li>1958</li><li>1957</li><li>1956</li><li>1955</li><li>1954</li><li>1953</li><li>1952</li><li>1951</li><li>1950</li><li>1949</li><li>1948</li><li>1947</li><li>1946</li><li>1945</li><li>1944</li><li>1943</li><li>1942</li><li>1941</li><li>1940</li><li>1939</li><li>1938</li><li>1937</li><li>1936</li><li>1935</li><li>1934</li><li>1933</li><li>1932</li><li>1931</li><li>1930</li><li>1929</li><li>1928</li><li>1927</li><li>1926</li><li>1925</li><li>1924</li><li>1923</li><li>1922</li><li>1921</li><li>1920</li></ul></div> -->
+                </div>
+
             </div>
         </div>
     
     </div>
 <div class="col-md-6">
     <h2>Professional Information</h2>   
-    <div class="form=group mt-2">
+    <div class="form-group mt-2">
         <label for="objective">Objective</label>
         <textarea name="obj" id="obj1" cols="30" rows="5" placeholder="Enter objective" class="form-control"></textarea>
     </div>
@@ -89,7 +104,7 @@
         <textarea 
         type="text"
         class="form-control weField"
-        id="Work"
+        id="we1"
         placeholder="Enter here"
         rows="3"
         ></textarea>
@@ -107,7 +122,7 @@
         <textarea 
         type="text"
         class="form-control eqFld"
-        id="Work"
+        id="aq1"
         placeholder="Enter here"
         rows="3"
         ></textarea>
@@ -121,7 +136,7 @@
 
    <div class="container text-center">
         <br>
-        <buttton class="btn btn-primary btn-lg">Generate CV</buttton>
+        <buttton  onclick="GenerateCV()" class="btn btn-primary btn-lg">Generate CV</buttton>
    </div>
 
 
@@ -133,27 +148,70 @@
 
 <div class="container" id="cv-template">
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 background text-center mt-5">
             <!-- first col -->
                 <img 
                 src="https://isobarscience.com/wp-content/uploads/2020/09/default-profile-picture1.jpg" 
                 alt=""
                 class="img-fluid myimg mt-2"
+                id="imgTemp"
                 >
 
             <div class="container">
-                <p>Harshal Bhogal</p>
-                <p>+919209685286</p>
-                <p>Stay in Heaven, Vaikhunth</p>
+                <p id="fnameT1">Harshal Bhogal</p>
+                <p id="phoneT">+919209685286</p>
+                <p id="addT">Stay in Heaven, Vaikhunth</p>
             </div>
 
         </div>
-        <div class="col-md-8">
+        <div class="col-md-8 py-5">
+            <h1 class="text-center" style="font-weight:980" id="fnameT2">Harshal Bhogal</h1>
+            <div class="card">
+                <div class="card-header background">
+                    <h3>Objective</h3>
+                </div>
+                <div class="card-body">
+                    <p id="obj"> Lorem ipsum dolor sit amet 
+                        consectetur adipisicing elit. Vero minima ab repudiandae earum a odit iure neque accusamus sapiente sunt assumenda quidem ratione tempore rem eveniet soluta, 
+                        cum dolore dolor!
+                    </p>
+                </div>
+            </div>
+
+            <!-- work experinece -->
+            <div class="card mt-4">
+                <div class="card-header background">
+                    <h3>Work experience</h3>
+                </div>
+                <div class="card-body">
+                    <ul id="weT">
+                        <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, quod mollitia sint sit voluptatem facere eveniet saepe aliquam minima obcaecati error illo similique beatae, harum labore odit doloribus. Explicabo, dolorem.</li>
+                        
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Academic Qualification -->
+            <div class="card mt-4">
+                <div class="card-header background">
+                    <h3>Academic Qualification</h3>
+                </div>
+                <div class="card-body">
+                    <ul id="aqT">
+                        <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, quod mollitia sint sit voluptatem facere eveniet saepe aliquam minima obcaecati error illo similique beatae, harum labore odit doloribus. Explicabo, dolorem.</li>
+                        
+                    </ul>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
 
 
+
+
 <script src="static\js\script.js"> </script>
-.
-{% endblock %}
+
+</body>
+</html>
