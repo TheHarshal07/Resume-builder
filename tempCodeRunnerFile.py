@@ -1,1 +1,1 @@
-flask
+conn=mysql.connector.connect(host="localhost", user="root", password="", database="resume", port="3306")

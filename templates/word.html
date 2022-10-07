@@ -4,9 +4,19 @@
 
 <link rel="stylesheet" href="static\css\style.css">
 
-<form class="form-group mt-5" action="/wordcld">
+<form class="form mt-5" method="POST" action="/wordcld1">
     <h2>Wordcloud</h2>
-    <button class="btn btn-primary" value="word">Click</button>
+    <label for="">Enter the string</label>
+    <textarea 
+        type="text"
+        id="t1"
+        name="t1"
+        class="form-control"
+        placeholder="Enter here"
+        rows="10"
+        cols="50"
+    ></textarea>
+    <button  class="btn btn-primary mt-2 btn-lg" value="word">Click</button>
     <!-- <textarea class="form-control" action="/wordcld" cols="60" rows="10" placeholder="type here"></textarea> -->
 </form>
 
