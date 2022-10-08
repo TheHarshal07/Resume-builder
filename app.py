@@ -99,7 +99,7 @@ def login_valid():
         email = request.form.get('email1')
         password = request.form.get('passwd')
 
-        cursor.execute(""" SELECT * FROM `resume` WHERE `email` LIKE '{}' AND `pass1` LIKE '{}' """.format(email,password))
+        cursor.execute(""" SELECT * FROM `user` WHERE `email` LIKE '{}' AND `pass1` LIKE '{}' """.format(email,password))
         users=cursor.fetchall()
         print(users)   
     if len(users)>0:
@@ -129,7 +129,7 @@ def add_user():
         elif passwd1 != passwd2:
             flash('Incorrect password', category='error')
         else:
-            cursor.execute(""" INSERT INTO `resume` (`fname` , `lname` , `email` , `pass1` , `pass2`) VALUES
+            cursor.execute(""" INSERT INTO `user` (`fname` , `lname` , `email` , `pass1` , `pass2`) VALUES
             ('{}', '{}','{}','{}','{}')""".format(fname1,lname1,email,passwd1,passwd2))
             conn.commit()
     
