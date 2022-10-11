@@ -1,16 +1,19 @@
 
+
+from distutils.log import error
 from sqlite3 import Cursor
 from turtle import home
 from wsgiref.util import request_uri
 from flask import Flask, render_template, request, flash, redirect  #flask class create Flask application instance named app.
 import datetime
-import mysql.connector
+import mysql.connector 
 
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'jknvsfkan sdfnkank'
 
-conn=mysql.connector.connect(host="sql6.freesqldatabase.com", user="sql6522603", password="cTFdJfDXNV", database="sql6522603", port="3306")
+# conn=mysql.connector.connect(host="sql6.freesqldatabase.com", user="sql6522603", password="cTFdJfDXNV", database="sql6522603", port="3306")
+conn=mysql.connector.connect(host="localhost", user="root", password="", database="resume", port="3306")
 cursor=conn.cursor()
 
 
@@ -55,16 +58,25 @@ def home():
 
 
 
-@app.route('/wordcld')
-def wordcld():
-    from wordcloud import WordCloud, STOPWORDS
-    from PIL import Image
-    # python -m pip install wordcloud
-    stop = set(STOPWORDS)
-    info = input("Enter the string: ")
-    word = WordCloud(stopwords = stop).generate(info)
-    img = word.to_image()
-    img.show()
+@app.route('/wordcld1', methods=['POST'])
+def wordcld1():
+    data1 = request.form
+    print(data1)
+    if request.form:
+        info = request.form.get('t1')
+        if len(info)>0:
+            from wordcloud import WordCloud, STOPWORDS
+            import matplotlib.pyplot as plt
+            # from PIL import Image
+            # python -m pip install wordcloud
+            # stop = set(STOPWORDS)
+        
+            word = WordCloud(background_color="white").generate(info)
+            plt.imshow(word)
+            plt.axis('off')
+            plt.show()
+        else:
+            flash("Please enter the job desciption", category='error')
 
     return render_template('word.html')
     

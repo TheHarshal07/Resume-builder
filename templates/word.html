@@ -4,10 +4,22 @@
 
 <link rel="stylesheet" href="static\css\style.css">
 
-<form class="form-group mt-5" action="/wordcld">
-    <h2>Wordcloud</h2>
-    <button class="btn btn-primary" value="word">Click</button>
+<form class="form mt-5" method="POST" action="/wordcld1">
+    <h2 class="bold">Wordcloud</h2>
+    
+    <textarea 
+        type="text"
+        id="t1"
+        name="t1"
+        class="form-control"
+        placeholder="Enter the job desciption"
+        rows="15"
+        cols="80"
+    ></textarea>
+    <div class="container text-center">
+    <button  class="btn btn-primary mt-2 btn-lg" value="word">Click here</button>
     <!-- <textarea class="form-control" action="/wordcld" cols="60" rows="10" placeholder="type here"></textarea> -->
+    </div>
 </form>
 
 <script src="static\js\script.js"> </script>

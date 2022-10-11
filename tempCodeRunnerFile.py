@@ -1,1 +1,1 @@
-flask
+        return redirect('/home')
