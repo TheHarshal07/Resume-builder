@@ -18,36 +18,44 @@
 
 <div class="row">
 
-   <div class="col-md-6">
+   <div class="col-md-4">
     <h2>Personal Information</h2>
-    
+    <div class="col-md-8">
+      <label for="">Select your photo</label>
+      <input id="imgFile" type="file" class="form-control"> 
+    </div>
     <div class="row">
         <div class="col-md-6">
             <div class="form-group mt-2">
-                <label for="">Select your photo</label>
-               <input id="imgF" type="file" class="form-control"> 
+               <label for="">First name</label>
+               <input 
+               type="text" 
+               id="fname1"
+               class="form-control" 
+               placeholder="Enter the First name">
+
             </div>
         </div>
 
         <div class="col-md-6">
             <div class="form-group mt-2">
-                <label for="fname">First name</label>
+                <label for="fname">Last name</label>
                 <input 
                 type="text" 
-                id="fname1"
+                id="lname1"
                 class="form-control" 
-                placeholder="Enter the first name">
+                placeholder="Enter the Last name">
             </div>
         </div>
 
     </div>
     <div class="fomr-group mt-2">
-        <label for="address1">Your address</label>
-        <textarea
+        <label for="address1">Email</label>
+        <input
         type="text" 
-        id="addr"
+        id="email"
         class="form-control" 
-        placeholder="Ente your address"></textarea>
+        placeholder="Ente your address"></input>
     </div>
 
     <div class="fomr-group mt-2">
@@ -60,26 +68,35 @@
     </div><br>
     
     <h2>Education details</h2>
-        <div class="row">
-            <div class="col-md-6 form-group mt-2">
+        <div class="row" >
+            <div class="col-md-6 form-group mt-2" >
                  <label for="sname">School/college name</label>
-                 <input type="text" class="form-control" placeholder="School name">
+                 <input type="text" id="clg" class="form-control ed" placeholder="School name">
 
+                 <label for="deg">Degree</label>
+                 <input type="text" id="dg" class="form-control" placeholder="Enter the Degree">
+
+                
+                
                  <label for="smonth">Start month</label>
-                 <input type="text" class="form-control" placeholder="Start month">
+                 <input type="text" id="sm" class="form-control ed" placeholder="Start month">
 
                  <label for="emonth">End month</label>
-                 <input type="text" class="form-control" placeholder="end month">
+                 <input type="text" id="em" class="form-control ed" placeholder="end month">
             </div>
             <div class="col-md-6 form-group mt-2">
                  <label for="locatio">location</label>
-                 <input type="text" class="form-control" placeholder="location">
+                 <input type="text" id="loc" class="form-control ed" placeholder="location">
+
+                 <label for="deg">Percentage/CGPA</label>
+                 <input type="text" id="prc" class="form-control" placeholder="Enter Percentage">
 
                  <label for="syear">Start year</label>
-                 <input type="text" class="form-control" placeholder="Start year">
+                 <input type="text" id="sy" class="form-control ed" placeholder="Start year">
                 <div class="form-group custom-select-box">
                  <label for="eyear">End year</label>
-                 <input type="text" class="form-control" placeholder="end year">
+                 <input type="text" id="ey" class="form-control ed" placeholder="end year">
+                
                  <!-- <div class="option-list">
                     <ul>
                         <li>End Year</li>
@@ -92,18 +109,25 @@
         </div>
     
     </div>
-<div class="col-md-6">
+<div class="col-md-8">
     <h2>Professional Information</h2>   
     <div class="form-group mt-2">
-        <label for="objective">Objective</label>
-        <textarea name="obj" id="obj1" cols="30" rows="5" placeholder="Enter objective" class="form-control"></textarea>
+        <label for="objective" class="lbl">Objective</label>
+        <textarea name="obj" id="obj1" cols="30" rows="5" placeholder="Enter objective" class="form-control mt-2"></textarea>
     </div>
 
     <div class="fomr-group mt-2" id="we">
-        <label for="work">Work experince</label>
+        <label for="work" class="lbl">Work experince</label>
+        <a href="#" class="add">&plus;</a>
+        
+        <div class="inp-group ">
+          
+        </div>
+
+
         <textarea 
         type="text"
-        class="form-control weField"
+        class="form-control weField mt-2"
         id="we1"
         placeholder="Enter here"
         rows="3"
@@ -112,101 +136,240 @@
 
         <div class="container text-center mt-2" id="WeButton">
             <button onclick="addNewweFeild()" class="btn btn-primary btn-sm">Add</button>
-            <button onclick="removeItem()" class="btn-close" type="button" aria-label="Close"></button>
+           
         </div>
+
+    <div class="form-group mt-2">
+      <label for="skills" class="lbl">Skills</label>
+      <a href="#" class="add1">&plus;</a>
+      <br>
+
+      <div class="inp-group1">
+
+      </div>
+
+
+
+
+    </div>
         
     
 
     <div class="fomr-group mt-2" id="Edufield">
-        <label>Academic Qualification</label>
+        <label class="lbl">Projects</label>
         <textarea 
         type="text"
-        class="form-control eqFld"
+        class="form-control eqFld mt-2"
         id="aq1"
         placeholder="Enter here"
         rows="3"
         ></textarea>
-    
-
         <div class="container text-center mt-2" id="eqField">
-            <button onclick="addNeweqField()" class="btn btn-primary btn-sm" >Add</button>
+          <button onclick="addNeweqField()" class="btn btn-primary btn-sm">Add</button>
+
         </div>
+
+        
     </div>
 </div>
+
+
 
    <div class="container text-center">
         <br>
-        <buttton  onclick="GenerateCV()" class="btn btn-primary btn-lg">Generate CV</buttton>
+        <buttton  onclick="GenerateCV()" class="btn btn-primary btn-lg">Generate</buttton>
    </div>
-
-
-
-
-
- </div>
 </div>
 
-<div class="container" id="cv-template">
-    <div class="row">
-        <div class="col-md-4 background text-center mt-5">
-            <!-- first col -->
-                <img 
+
+
+<!-- Tempplate for resume -->
+<!-- Span > It is mostly used for grouping and styling bits of content. 
+  It is very much like <div> but div is block level element and span is a inline element  -->
+
+</div>
+
+
+<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+
+<div class="container2" id="cv-template">
+  <div class="row">
+    <div class="col-md-2">
+  <img 
                 src="https://isobarscience.com/wp-content/uploads/2020/09/default-profile-picture1.jpg" 
                 alt=""
                 class="img-fluid myimg mt-2"
-                id="imgTemp"
+                id="imgTem"
                 >
-
-            <div class="container">
-                <p id="fnameT1">Harshal Bhogal</p>
-                <p id="phoneT">+919209685286</p>
-                <p id="addT">Stay in Heaven, Vaikhunth</p>
-            </div>
-
-        </div>
-        <div class="col-md-8 py-5">
-            <h1 class="text-center" style="font-weight:980" id="fnameT2">Harshal Bhogal</h1>
-            
-                <div class="card-header background">
-                    <h3>Objective</h3>
-                </div>
-                <div class="card-body">
-                    <p id="obj"> Lorem ipsum dolor sit amet 
-                        consectetur adipisicing elit. Vero minima ab repudiandae earum a odit iure neque accusamus sapiente sunt assumenda quidem ratione tempore rem eveniet soluta, 
-                        cum dolore dolor!
-                    </p>
-                </div>
-            
-
-            <!-- work experinece -->
-            <div class="card mt-4">
-                <div class="card-header background">
-                    <h3>Work experience</h3>
-                </div>
-                <div class="card-body">
-                    <ul id="weT">
-                        <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, quod mollitia sint sit voluptatem facere eveniet saepe aliquam minima obcaecati error illo similique beatae, harum labore odit doloribus. Explicabo, dolorem.</li>
-                        
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- Academic Qualification -->
-            <div class="card mt-4">
-                <div class="card-header background">
-                    <h3>Academic Qualification</h3>
-                </div>
-                <div class="card-body">
-                    <ul id="aqT">
-                        <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, quod mollitia sint sit voluptatem facere eveniet saepe aliquam minima obcaecati error illo similique beatae, harum labore odit doloribus. Explicabo, dolorem.</li>
-                        
-                    </ul>
-                </div>
-            </div>
-
-        </div>
     </div>
+    <div class="col-md-10">
+  <div class="header">
+    <div class="full-name">
+      <span class="first-name" id="fnameT1">John</span> 
+      <span class="last-name" id="lnameT2">Doe</span>
+    </div>
+    <div class="contact-info">
+      <span class="email">Email: </span>
+      <span class="email-val"  id="emailT1">john.doe@gmail.com</span>
+      <span class="separator"></span>
+      <span class="phone">Phone: </span>
+      <span class="phone-val" id="phoneT1">111-222-3333</span>
+    </div>
+    
+    <div class="about">
+      
+      <span class="desc" id="obj">
+        I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow. 
+      </span>
+    </div>
+  </div>
 </div>
+</div>
+
+
+
+  <div class="detail">
+
+    <div class="section">
+      <div class="section__title">Education</div>
+      <div class="section__list">
+        <div class="section__list-item">
+          <div class="left">
+            <div class="name" id="clgT1">Sample Institute of technology</div>
+            <div class="addr" id="locT1" >San Fr, CA</div>
+             <span class="durataion" id="smT1">feb</span> <span class="durataion" id="syT1">2012</span> <span>-</span>
+             <span class="durataion" id="emT1">dec</span> <span class="durataion" id="eyT1">2022</span>
+          </div>
+          <div class="right">
+            <span class="name" id="dgT1">B.Tech/B.E</span><br>
+            <span class="desc" id="prcT1">e.g 9.4 CGPA / Percentage</span>
+          </div>
+        </div>  
+      </div>
+
+    </div>
+      <div class="section">
+        <div class="section__title">Experience</div>
+        <div class="section__list">
+          <div class="section__list-item">
+            <div class="left">
+              <div class="name" id="cnT1">KlowdBox</div>
+            
+              <span class="duration" id="ssyT1">Jan 2011</span> <span>-</span> <span class="duration" id="eeyT1">feb 2022</span>
+            </div>
+            <div class="right">
+              <span class="name"  id="posT1">Fr developer</span><br>
+             
+            </div>
+            <br>
+            <span class="desc" id="desT1">did This and jbkbkjb that</span>
+
+          </div>
+                  <div class="section__list-item">
+            <div class="left">
+              <div class="name" id="aqT1" >Akount</div>
+              
+              <span id="sTl1">Jan 2011</span> <span>-</span> <span id="eTl1">feb 2022</span>
+            </div>
+            <div class="right">
+              <span class="name"  id="poT1">Fr developer</span>
+              <br>
+              
+            </div>
+            <br>
+            <span class="desc" id="weT">did This and jbkbkjb that</span>
+          </div>
+  
+        </div>
+      </div>
+      
+    <div class="row">
+      <div class="col-md-6">
+        <div class="section">
+          <div class="section__title">Hard-skills</div>
+           <div class="skills">
+            <div class="skills__item">
+              <div class="left"><div class="name" id="skkT1">
+                Javascript
+                </div></div>
+            </div>
+            
+          </div>
+          <div class="skills__item">
+              <div class="left"><div class="name" id="sklT1">
+                CSS</div></div>
+            </div>
+          </div>
+        </div>
+
+      <div class="col-md-5">
+        <div class="right1">
+          <div class="section">
+            <div class="section__title">Soft-skills</div>
+            <div class="skills">
+              <div class="skills__item">
+                <div class="left1"><div class="name" id="skkT2">
+                  Project management
+                  </div></div>
+              </div>
+              
+            </div>
+            <div class="skills__item">
+                <div class="left1"><div class="name" id="sklT2">
+                  Leadership</div></div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+      <div class="section mt-3">
+        <div class="section__title">Projects</div> 
+         <div class="section__list">
+           <div class="section__list-item">
+             
+             <div class="text" id="prjT1">I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow.</div>
+           </div>
+           
+           <div class="section__list-item">
+                      
+             <div class="text" id="prjTT">I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow. <a href="/login">link</a>
+             </div>
+           </div>
+         </div>
+      </div>
+
+      </div>
+
+
+    
+  </div>
+  <div class="container5 text-center mt-3">
+    <button type="button" id="pp22" class="btn btn-success btn-lg" onclick="PrintCV()" >Print</button>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
 
 
 <script src="static\js\script.js"> </script>

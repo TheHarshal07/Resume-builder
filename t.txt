@@ -1,0 +1,82 @@
+<div class="container" id="cv-template">
+    
+    <div class=" mt-5">
+        <!-- first col -->
+            <img 
+            src="https://isobarscience.com/wp-content/uploads/2020/09/default-profile-picture1.jpg" 
+            alt=""
+            class="img-fluid myimg mt-2"
+            id="imgTemp"
+            >
+
+            <div class="right">
+              <div class="full-name right">
+                <span class="first-name">John</span> 
+                <span class="last-name">Doe</span>
+              </div>
+              <div class="contact-info">
+                <span class="email">Email: </span>
+                <span class="email-val">john.doe@gmail.com</span>
+                <span class="separator"></span>
+                <span class="phone">Phone: </span>
+                <span class="phone-val">111-222-3333</span>
+              </div>
+              
+              <div class="about">
+                <span class="position">Front-End Developer </span>
+                <span class="desc">
+                  I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow. 
+                </span>
+              </div>
+            </div>
+
+        <!-- <div class="container">
+            <span id="fnameT1">Harshal</span> <span>Bhogal</span><br>
+            <span id="phoneT">+919209685286</span><br>
+            <span id="addT">Stay in Heaven, Vaikhunth</span>
+        </div> -->
+
+    </div>
+    <div class="py-5">
+        <h1 class="text-center" style="font-weight:980" id="fnameT2">Harshal Bhogal</h1>
+        
+            <div class="card-header background">
+                <h3>Objective</h3>
+            </div>
+            <div class="card-body">
+                <p id="obj"> Lorem ipsum dolor sit amet 
+                    consectetur adipisicing elit. Vero minima ab repudiandae earum a odit iure neque accusamus sapiente sunt assumenda quidem ratione tempore rem eveniet soluta, 
+                    cum dolore dolor!
+                </p>
+            </div>
+        
+
+        <!-- work experinece -->
+        <div class="card mt-4">
+            <div class="card-header background">
+                <h3>Work experience</h3>
+            </div>
+            <div class="card-body">
+                <ul id="weT">
+                    <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, quod mollitia sint sit voluptatem facere eveniet saepe aliquam minima obcaecati error illo similique beatae, harum labore odit doloribus. Explicabo, dolorem.</li>
+                    
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Academic Qualification -->
+        <div class="card mt-4">
+            <div class="card-header background">
+                <h3>Academic Qualification</h3>
+            </div>
+            <div class="card-body">
+                <ul id="aqT">
+                    <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, quod mollitia sint sit voluptatem facere eveniet saepe aliquam minima obcaecati error illo similique beatae, harum labore odit doloribus. Explicabo, dolorem.</li>
+                    
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+</div>

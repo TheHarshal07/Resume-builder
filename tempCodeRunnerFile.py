@@ -1,1 +1,1 @@
-conn=mysql.connector.connect(host="localhost", user="root", password="", database="resume", port="3306")
+        return redirect('/home')

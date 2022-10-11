@@ -66,14 +66,17 @@ def wordcld1():
         info = request.form.get('t1')
         if len(info)>0:
             from wordcloud import WordCloud, STOPWORDS
-            from PIL import Image
+            import matplotlib.pyplot as plt
+            # from PIL import Image
             # python -m pip install wordcloud
-            stop = set(STOPWORDS)
-            word = WordCloud(stopwords = stop).generate(info)
-            img = word.to_image()
-            img.show()
+            # stop = set(STOPWORDS)
+        
+            word = WordCloud(background_color="white").generate(info)
+            plt.imshow(word)
+            plt.axis('off')
+            plt.show()
         else:
-            flash("Please enter the string", category='error')
+            flash("Please enter the job desciption", category='error')
 
     return render_template('word.html')
     

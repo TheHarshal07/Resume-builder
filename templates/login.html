@@ -2,7 +2,6 @@
 
 {% block content %}
 
-<div class="main1">
     <div class="row">
         <div class="col-md-8">
             <h1 class="display-4 mt-100 cv"> 
@@ -12,7 +11,7 @@
         <div class="col-md-4">
             <div class="card mt-100">
                 <div class="card-body">
-                    <form calss="form" method="POST" action="/login_valid">
+                    <form calss="form " method="POST" action="/login_valid">
                          <!-- POST methode carry requested parameter in message body of the HTTP request
                             GET methode carry rquested parameter appended in URL string-->
      <style>
@@ -48,9 +47,9 @@
          id="passwd"
          placeholder=" Enter the password"/>
      </div>
-     <p class="mt-2">New user? <a href="/signup">Create account</a></p>
-     <div class=" form-group">
-        <button type="submit" class="btn btn-primary " value="Login" padding-left="10px">LOGIN</button>
+     <p class="mt-2">New user? <a href="/signup">Create an account</a></p>
+     <div class=" form-group text-center">
+        <button type="submit" class="btn btn-primary " value="Login" padding-left="10px">L O G I N</button>
      </div>
                     </form>
                 </div>
@@ -59,15 +58,15 @@
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
         <script>
           var typed = new Typed(".auto-type", {
-              strings: ["  Create a job-winning CV Get a recruiter-approved CV in minutes with our easy-to-use builder and get hired quicker. "],
-              typeSpeed: 150,
-              backSpeed: 150,
+              strings: ["  A Free, Quick and Easy Way to Create Your Professional Resume "],
+              typeSpeed: 100,
+              backSpeed: 300,
               loop: true
           })  
         </script>
     </div>
    
-</div>
+
 
 {% endblock %}
 
