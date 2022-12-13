@@ -2,11 +2,35 @@
 
 {% block content %}
 
+    <div class="main1">
+        <div class="navbar">
+            <div class="logo">
+                <h2>Resumne-Builder</h2>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="/home">HOME</a></li>
+                    <li><a href="/signup">SIGN_UP</a></li>
+                    <li><a href="/login">LOGIN</a></li>
+                    <li><a href="/login">LOGOUT</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <div class="row">
         <div class="col-md-8">
-            <h1 class="display-4 mt-100 cv"> 
-            <span class="auto-type"></span>
-            </h1>
+            
+            <h3 class="display-4 mt-100 cv"> 
+                <div class="content">
+                    <h1>Resume-Builder using <br> <span class="auto-type"></span></h1> 
+                    <button class="cn"><a href="#">Create Resume</a></button>
+                </div>
+            <span class="auto-type1"></span>
+         
+            </h3>
+          
+            
         </div>
         <div class="col-md-4">
             <div class="card mt-100">
@@ -58,11 +82,18 @@
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
         <script>
           var typed = new Typed(".auto-type", {
-              strings: ["  A Free, Quick and Easy Way to Create Your Professional Resume "],
-              typeSpeed: 100,
-              backSpeed: 300,
-              loop: true
+              strings: [" Wordcloud"],
+            //   strings: ["  A Free, Quick and Easy Way to Create Your Professional Resume "],
+              typeSpeed: 180,
           })  
+         var typed = new Typed(".auto-type1",{
+            strings : ["A Free, Quick and Easy Way to Create Your Professional Resume"],
+            typeSpeed: 100,
+            backspeed: 200,
+            loop : true
+
+         })
+         alert("Hello")
         </script>
     </div>
    

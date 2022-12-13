@@ -1,9 +1,3 @@
-
-
-from distutils.log import error
-from sqlite3 import Cursor
-from turtle import home
-from wsgiref.util import request_uri
 from flask import Flask, render_template, request, flash, redirect  #flask class create Flask application instance named app.
 import datetime
 import mysql.connector 
@@ -70,7 +64,6 @@ def wordcld1():
             # from PIL import Image
             # python -m pip install wordcloud
             # stop = set(STOPWORDS)
-        
             word = WordCloud(background_color="white").generate(info)
             plt.imshow(word)
             plt.axis('off')

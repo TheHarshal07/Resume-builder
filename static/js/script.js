@@ -337,5 +337,6 @@ document.getElementById('pp22').style.display="block";
 function PrintCV(){
     document.getElementById('pp22').style.display="block";
     window.print();
+    
 
 }

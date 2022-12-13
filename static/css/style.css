@@ -10,6 +10,10 @@
     display: none;
 }
 
+.container{
+  width: auto;
+}
+
 #pp22{
   display: none;
 }
@@ -32,7 +36,90 @@
     background-size: cover;
     height: 109vh;
 }
+.menu{
+  width: 1000px;
+  float: right;
+  height: 70px;
 
+  }
+
+  ul{
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+  ul li{
+  list-style: none;
+  margin-left: 90px;
+  margin-top: 19px;
+  font-size: 18px;
+  }
+
+  ul li a{
+  text-decoration: none;
+  color: #fff;
+  font-family: Arial;
+  font-weight: bold;
+  transition: 0.4s ease-in-out;
+  }
+  ul li a:hover{
+  color: #ff7200;
+  }
+
+  .search{
+    width: 330px;
+    float: left;
+    margin-left: 270px;
+  }
+
+  .content{
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    color: #fff;
+    position: relative;
+    font-size: 40px;
+  }
+  .content h1{
+    font-size: 50px;
+  }
+
+.auto-type1{
+    font-family: "Times New Roman";
+    font-size: 50px;
+    padding-left:auto;
+    margin-top: 9px;
+    letter-spacing: 2px;
+    color: #fff;
+  }
+
+.content .cn{
+    width:  190px;
+    height: 40px;
+    background: #76a7e7;
+    border: none;
+    margin-bottom: 10px;
+    margin-left: auto;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+.content .cn a{
+  text-decoration: none;
+  color: #000;
+  transition: .3 ease;
+}
+
+.cn:hover{
+  background: #fff;
+}
+
+.content span{
+  color: #ff7200;
+  font-size: 60px;
+}
 .myimg{
     border-radius: 50%;
     width: 200px;
@@ -40,10 +127,10 @@
 
 .bg1{
     width: 100%;
-    background-image: url('../img/cesar-couto-TIvFLeqZ4ec-unsplash.jpg');
+    background-image: url('../img/pexels-philippe-donn-1169754.jpg');
     background-position: center ;
     background-size: cover;
-    height: 109vh;
+   
 }
 
 .nvabar{
@@ -62,7 +149,7 @@
    
     font-size: 20px;
     font-family: Algerian;
-    padding-left: 10px;
+    padding-left: auto;
     float: left;
     padding-top: 5px;
 }
@@ -79,10 +166,10 @@
   display: inline-block;
 }
 
-/* .btn{
+.btn{
     size:10px;
-    padding: 15px;
-} */
+    padding: 8px;
+}
 
 
 
@@ -92,13 +179,11 @@
 }
 
 .container2 {
-  max-width: 900px;   
+  max-width: 850px;   
   background: #fff;
   margin: 0px auto 0px; 
-  box-shadow: 1px 1px 2px #DAD7D7;
-  border-radius: 3px; 
   padding-bottom: 15px; 
- 
+  height: 100ch;
   
 }
 
@@ -146,7 +231,7 @@
   line-height: 20px;
 }
   .section {
-    margin-bottom: 18px;  
+    margin-bottom: 22px;  
   }
   
   .section:last-of-type {
@@ -189,12 +274,13 @@
   .right {
     text-align: right;
      width: fit-content;
+     margin-top: auto;
      width: 22%;
   }
 
   .right1 {
     text-align: right;
-    width: fit-content;
+    width: auto;
     width: 80%;    
   }
 
@@ -240,7 +326,7 @@
   
     .logo{
       font-weight: 900;
-      color: #ef883f;
+      color: #64bcec;
   }
 
 /* Dynmaic creation */
